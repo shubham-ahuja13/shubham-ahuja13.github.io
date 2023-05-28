@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="/public/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="apple-touch-icon" sizes="128x128" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width" />
+  <meta charSet="utf-8" />
+  <title>Hey! This page is password protected</title>
+  <meta name="next-head-count" content="3" />
+  <link rel="preload" href="_next/static/css/2ac1c720b6118c4d.css" as="style" />
+  <link rel="stylesheet" href="_next/static/css/2ac1c720b6118c4d.css" data-n-g="" /><noscript
+      data-n-css=""></noscript>
+  <script defer="" nomodule="" src="_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script>
+  <script>
+    function authenticatePassword() {
+      // Get the value entered in the password input field
+      var password = document.getElementById("password").value;
+
+      // Check if the password matches the correct password
+      if (password === "passwordportfolio") {
+        // alert("Authentication successful!");
+        window.location.href="Platform-navigation.html";
+      } else {
+        alert("Authentication failed. Incorrect password!");
+      }
+    }
+  </script>
+  <style>
+    button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    background-color: #CBE8EC;
+    color: #222;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    max-width: 400px;
+    }
+    button:hover {
+      background-color: #A8D9DF;
+    }
+  </style>
+</head>
+<body class="pb-24">
+<div class="max-w-5xl m-auto w-full grid grid-cols-2 py-12 print:hidden pb-12 pt-24 px-4 md:px-0">
+    <p class="text-2xl">Hey! This page is password protected</p>
+</div>
+<div class="max-w-5xl m-auto w-full grid grid-cols-1 px-4 md:px-0" style="padding-bottom: 8px;"> 
+    <label for="password" style="padding: bottom 8px;">Password</label>
+</div>
+<div class="max-w-5xl m-auto w-full grid grid-cols-1 px-4 md:px-0" style="padding-bottom: 8px;">
+    <input type="password" id="password"name="password" class="moz-placeholder" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; max-width: 400px;" >
+</div>
+<div class="max-w-5xl m-auto w-full grid grid-cols-1 px-4 md:px-0" style="padding-bottom: 8px;" >
+    <button onclick="authenticatePassword()">Let me in!</button>
+</div>
+  
+
+  
+</body>
+</html>
